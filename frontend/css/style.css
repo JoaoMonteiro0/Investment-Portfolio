@@ -1,0 +1,71 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 30px;
+    background: #0f172a; 
+    color: white;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* LOGO */
+.logo , .logo a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+}
+
+/* LINKS */
+.nav-links{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+/* LINKS STYLE */
+.nav-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 14px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav-links a:hover {
+    color: white;
+}
+
+/* ACTIVE LINK */
+.nav-links a.active {
+    color: white;
+}
+
+/* UNDERLINE ANIMATION */
+.nav-links a::after {
+    content: ""; /* para a linha puder aparecer */
+    position: absolute;
+    left: 0; /* ficar alinhado com o txt */
+    bottom: -6px; /* aparecer por baixo */
+    width: 0%; /* para ficar invisivel */
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.5s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
